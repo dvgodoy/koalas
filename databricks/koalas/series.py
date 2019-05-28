@@ -36,7 +36,7 @@ from databricks.koalas.frame import DataFrame
 from databricks.koalas.generic import _Frame, max_display_count
 from databricks.koalas.metadata import Metadata
 from databricks.koalas.missing.series import _MissingPandasLikeSeries
-from databricks.koalas.plot import KoalasSeriesPlotMethods
+# from databricks.koalas.plot import KoalasSeriesPlotMethods
 from databricks.koalas.utils import validate_arguments_and_invoke_function
 
 
@@ -156,7 +156,7 @@ class Series(_Frame, IndexOpsMixin):
         """ Returns the data type as defined by Spark, as a Spark DataType object."""
         return self.schema.fields[-1].dataType
 
-    plot = CachedAccessor("plot", KoalasSeriesPlotMethods)
+    #plot = CachedAccessor("plot", KoalasSeriesPlotMethods)
 
     def astype(self, dtype) -> 'Series':
         """
