@@ -172,11 +172,11 @@ class DataFrameConversionTest(ReusedSQLTestCase, SQLTestUtils, TestUtils):
         self.assert_eq(kdf.to_json(orient='split', index=False),
                        pdf.to_json(orient='split', index=False))
 
-    # def test_to_clipboard(self):
-    #     pdf = self.pdf
-    #     kdf = self.kdf
-    #
-    #     self.assert_eq(kdf.to_clipboard(), pdf.to_clipboard())
+    def test_to_clipboard(self):
+        pdf = self.pdf
+        kdf = self.kdf
+
+        self.assert_eq(kdf.to_clipboard(), pdf.to_clipboard())
     #     self.assert_eq(kdf.to_clipboard(excel=False),
     #                    pdf.to_clipboard(excel=False))
     #     self.assert_eq(kdf.to_clipboard(sep=";", index=False),
