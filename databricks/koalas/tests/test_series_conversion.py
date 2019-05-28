@@ -31,15 +31,15 @@ class SeriesConversionTest(ReusedSQLTestCase, SQLTestUtils):
     def ks(self):
         return koalas.from_pandas(self.ps)
 
-    def test_to_clipboard(self):
-        ps = self.ps
-        ks = self.ks
-
-        self.assert_eq(ks.to_clipboard(), ps.to_clipboard())
-        self.assert_eq(ks.to_clipboard(excel=False),
-                       ps.to_clipboard(excel=False))
-        self.assert_eq(ks.to_clipboard(sep=',', index=False),
-                       ps.to_clipboard(sep=',', index=False))
+    # def test_to_clipboard(self):
+    #     ps = self.ps
+    #     ks = self.ks
+    #
+    #     self.assert_eq(ks.to_clipboard(), ps.to_clipboard())
+    #     self.assert_eq(ks.to_clipboard(excel=False),
+    #                    ps.to_clipboard(excel=False))
+    #     self.assert_eq(ks.to_clipboard(sep=',', index=False),
+    #                    ps.to_clipboard(sep=',', index=False))
 
     def test_to_latex(self):
         ps = self.ps
