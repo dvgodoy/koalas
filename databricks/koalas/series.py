@@ -1228,10 +1228,10 @@ class Series(_Frame, IndexOpsMixin):
 
     sample.__doc__ = DataFrame.sample.__doc__
 
-    def hist(self, bins=10, **kwds):
-        return self.plot.hist(bins, **kwds)
+    #def hist(self, bins=10, **kwds):
+    #    return self.plot.hist(bins, **kwds)
 
-    hist.__doc__ = KoalasSeriesPlotMethods.hist.__doc__
+    #hist.__doc__ = KoalasSeriesPlotMethods.hist.__doc__
 
     def apply(self, func, args=(), **kwds):
         """
