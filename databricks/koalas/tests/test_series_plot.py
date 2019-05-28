@@ -14,19 +14,19 @@
 # limitations under the License.
 #
 
-import base64
-from io import BytesIO
-import matplotlib
-matplotlib.use('agg')
-from matplotlib import pyplot as plt
-import numpy as np
-import pandas as pd
-
-from databricks import koalas
-from databricks.koalas.testing.utils import ReusedSQLTestCase, TestUtils
-from databricks.koalas.plot import KoalasHistPlotSummary, KoalasBoxPlotSummary
-
-
+# import base64
+# from io import BytesIO
+# import matplotlib
+# matplotlib.use('agg')
+# from matplotlib import pyplot as plt
+# import numpy as np
+# import pandas as pd
+#
+# from databricks import koalas
+# from databricks.koalas.testing.utils import ReusedSQLTestCase, TestUtils
+# from databricks.koalas.plot import KoalasHistPlotSummary, KoalasBoxPlotSummary
+#
+#
 # class SeriesPlotTest(ReusedSQLTestCase, TestUtils):
 #
 #     @property
