@@ -37,6 +37,7 @@ class UtilsTest(ReusedSQLTestCase, SQLTestUtils):
 
     def to_clipboard(self, sep=',', **kwargs):
         args = locals()
+        print(args)
 
         pdf = pd.DataFrame({
             'a': [1, 2, 3],
