@@ -57,7 +57,7 @@ class UtilsTest(ReusedSQLTestCase, SQLTestUtils):
             self.to_html(unsupported_param=1)
 
         # Support for **kwargs
-        # self.to_clipboard(sep=',', index=False)
+        self.to_clipboard(sep=',', index=False)
 
     def test_lazy_property(self):
         obj = TestClassForLazyProp()

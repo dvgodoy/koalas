@@ -18,6 +18,7 @@ Commonly used utils in Koalas.
 """
 
 import functools
+import inspect
 from typing import Callable, Dict, Union
 
 from pyspark import sql as spark
@@ -53,7 +54,6 @@ def validate_arguments_and_invoke_function(pobj: Union[pd.DataFrame, pd.Series],
                        input parameters, rather than local variables.
     :return: whatever pandas_func returns
     """
-    import inspect
 
     # Makes a copy since whatever passed in is likely created by locals(), and we can't delete
     # 'self' key from that.
