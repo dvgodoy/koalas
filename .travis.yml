@@ -48,9 +48,11 @@ install:
   # Useful for to_clipboard test
   - export DISPLAY=:0.0
   - sudo apt-get install xclip
+  #- sudo apt-get install pyqt5-dev-tools
 
 before_script:
   - export SPARK_HOME="$HOME/.cache/spark-versions/spark-$SPARK_VERSION-bin-hadoop2.7"
+  - export QT_QPA_PLATFORM="offscreen"
 
 script:
   - ./dev/pytest
