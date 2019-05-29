@@ -59,7 +59,6 @@ def validate_arguments_and_invoke_function(pobj: Union[pd.DataFrame, pd.Series],
     # 'self' key from that.
     args = input_args.copy()
     del args['self']
-    print(args)
 
     if 'kwargs' in args:
         # explode kwargs
@@ -67,11 +66,8 @@ def validate_arguments_and_invoke_function(pobj: Union[pd.DataFrame, pd.Series],
         del args['kwargs']
         args = {**args, **kwargs}
 
-    print(args)
     koalas_params = inspect.signature(koalas_func).parameters
-    print(koalas_params)
     pandas_params = inspect.signature(pandas_func).parameters
-    print(pandas_params)
 
     for param in koalas_params.values():
         if param.name not in pandas_params:
